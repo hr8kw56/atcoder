@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<string.h>
+
+#define MAX 200000
+
+void run(){
+  char S[MAX+1];
+  scanf(" %s", S);
+  signed int len = strlen(S);
+  char *a = S;
+  int n = -1, cnt = 0, ans = 0;
+  while(n!=len-1){
+    while(a[++n] == 'B') cnt++;
+    ans += cnt;
+  }
+  printf("%d\n", ans);
+}
+
+
+int main(){
+  run();
+  return 0;
+}
